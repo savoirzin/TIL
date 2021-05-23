@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript 100</title>
+</head>
+<body>
+<script>
+    // Q.30
+    // const first = prompt("문자열을 입력하시")
+    // const second = prompt("찾을 문자 입력하시오")
+
+    console.log(first.indexOf(second))
+
+    // Q.31
+    /*
+        빅오 표기법 : 알고리즘이 걸리는데 필요한 시간의 수학적인 표현
+
+        내장 함수들을 알고리즘에서 사용할려면 각각의 메소드가 어떤 방식으로 동작하는지 정확히 알 필요가 있다.
+        find, findIndex, map, forEach, indexOf 등의 array 메소드들은 모두 해당 배열을 앞단부터 순회하는 케이스가 많다.
+        이는 Target Array의 길이가 길어질수록 탐색의 빅오는 최악의 경우 O(N)이다.
+
+        O(1) : 입력 데이터에 상관없이 언제나 일정 시간이 걸리는 데이터
+        O(n) : 입력 데이터의 크기에 비례해서 처리시간이 걸리는 알고리즘 표 (데이터 - 시간 비례그래프) / n X n = 면
+        O(n2) : n번 데이터가 n번씩 루프를 도는 것
+        O(nm) : n2과 비슷하나 m이 n보다 작을 수 있음.
+        O(n3) : n2을 n만틈 루프를 도는 것으로 큐브가 형성된다.
+        O(2n) : 피보나치수열 / 매번 함수를 호출할때마다 두개씩 필요하므로 2개씩 호출 한
+        O(log n) : 한번 처리 진행될때마다 검색해야되는 데이터 양이 절반씩 떨어지는
+        O(square n) : 제곱근
+        상수는 과감하게 버린다. 상수는 고정된 숫자니까 증가하지않는 숫자는 신경쓰지않겠다는 의미로 상수를 버린다.
+        O(2n) => O(n)으로 본다.
+    */
+    // Q.32
+
+
+</script>
+</body>
+</html>
