@@ -20,6 +20,16 @@ const promise = new Promise((resolve,reject) => {
 });
 
 // 2. consumers : then, catch, finally 를 이용해서 값을 받아올 수 있음
-promise.then((value) => {
+promise
+    .then((value) => {//똑같은 프로미스를 리턴하므로 그 리턴괸 프로미스를가지고 호출 - 이것을 체이닝이라고 함
     console.log(value);
+})
+.catch(error =>{
+    console.log(error);
+})
+.finally(()=>{//어떤기능을 마지막으로 실행하고자 할때
+    console.log('finally')
 });
+
+
+//3.promise chaining
