@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM완전 정복</title>
+</head>
+<body>
+<!-- DOM 큰 그림 이해하기 -->
+<!--
+4.1 : DOM 큰그림 이해하기
+Document Object Model
+
+html tag -> javascript node (클래스 / 텍스트 / element /Document 등 다양한 Node들의 모음.. 모든 정보 포함)
+
+eventTarget을 상속하는 Object
+
+HTMLElement -> Element -> Node -> eventTarget
+node 는 즉 eventTarget이다
+
+메모리에 보관할수있는 오브젝트로 변환되어진다.
+
+window
+ㄴ DOM
+ㄴ BOM
+ㄴ JavaScript
+
+-->
+
+<!--
+4.2 우리의 조상 이벤트 타겟
+
+eventTarget에는 3가지 메소드가 존재 (eventTarget에서 지원해주는 api)
+1. addEventListener() : 등록
+2. removeEventListener() : 빼기
+3. dispatchEvent() : 특정이벤트 발행
+
+이 모든게 가능한 이유는 node는 eventTarget이니까!
+
+
+
+-->
+</body>
+</html>
