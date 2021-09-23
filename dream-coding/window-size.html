@@ -6,9 +6,40 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="position.js">
+    <style>
+        .tag{
+            display: inline-block;
+            background-color:thistle;
+            padding:16px;
+            margin-top: 15px;
+            font-size:20px;
+        }
+    </style>
 </head>
 <body>
+<div class="tag">window size</div>
+<script>
+    /*
+    window.addEventListener('resize',function () {
+        console.log('resize');
+    });
+     */
+    const tag = document.querySelector('.tag'); // div class="tag"를 가리키고있음.
+    function update(){
+        tag.innerHTML=`
+        window.screen: ${window.screen.width}, ${window.screen.height} <br>
+        window.outer: ${window.outerWidth}, ${window.outerHeight}<br>
+        window.inner: ${window.innerWidth}, ${window.innerHeight}<br>
+        documentElement.clientWidth: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}
+        `;
+    }
 
+    //이벤트 발생시 상시 받아오는것보다 .tag는 변하지 않는것이므로 전역 const tag 변수 선언 한다.
+
+    window.addEventListener('resize',() => {
+        update();//브라우저 리사이징 일어날시 실행되는 함수 실행순서2번
+    });
+    update(); // 실행순서1번 : 브라우저 키자마자 보여질 수 있음.
+</script>
 </body>
 </html>
