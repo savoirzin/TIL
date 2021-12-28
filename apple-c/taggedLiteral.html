@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tagged literal</title>
+</head>
+<body>
+<!-- part1 Template literals / tagged literals 연습문제 -->
+<script>
+    var pants = 20;
+    var socks = 100;
+    `바지${pants} 양말${socks}`;
+    해체분석기`바지${pants} 양말${socks}`
+    //1.
+    /*function 해체분석기(문자들,변수들1,변수들2){
+        console.log(문자들[0] + 변수들1 + 문자들[1] + 변수들2);
+    }*/
+
+    //2. 내 답
+    function 해체분석기(문자들,변수들1,변수들2){
+        if(pants == 0){
+            console.log(문자들[0] + `다 팔렸어요` + 문자들[1] + 변수들2);
+        }
+    }
+    // 2. 답
+    function 해체분석기(글자들, 변수들1, 변수들2){
+        if(변수들1 == 0){
+            console.log(`바지다팔렸어요 양말` + 변수들2);
+        }
+    }
+
+</script>
+</body>
+</html>
